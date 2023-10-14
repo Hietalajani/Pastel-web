@@ -1,0 +1,68 @@
+:root {
+    --ppink: #F7C8E0;
+    --pgreen: #DFFFD8;
+    --plightblue: #B4E4FF;
+    --pblue: #95BDFF;
+    --pblack: #272932;
+    --pwhite: #F6F5F0;
+}
+
+@font-face {
+    font-family: Room205;
+    src: local("C:\Users\hiets\Downloads\room205-regular\Room205-Regular.otf");
+}
+
+html {
+    font-family: Aptos, sans-serif;
+}
+
+body {
+    margin: 0;
+
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+
+    height: 100vh;
+    width: 100vw;
+}
+
+section {
+    height: 100%;
+    width: 100%;
+    background: rgb(247, 200, 224);
+    background: radial-gradient(circle,
+    rgba(247, 200, 224, 1) 4%,
+    rgba(239, 218, 221, 1) 19%,
+    rgba(232, 234, 219, 1) 37%,
+    rgba(228, 245, 218, 1) 47%,
+    rgba(225, 250, 217, 1) 54%,
+    rgba(223, 255, 216, 1) 64%,
+    rgba(180, 228, 255, 1) 84%);
+
+    scroll-snap-align: start;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: Room205, sans-serif;
+    font-size: 8rem;
+
+    margin: 0;
+}
+
+button {
+    aspect-ratio: 1;
+    height: 4rem;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--pwhite);
+
+    position: absolute;
+    bottom: 10rem;
+
+    cursor: pointer;
+}
