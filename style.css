@@ -8,15 +8,25 @@
 }
 
 @font-face {
-    font-family: Room205;
-    src: local("C:\Users\hiets\Downloads\room205-regular\Room205-Regular.otf");
+    font-family: "SmileCandy";
+    src: url("/resources/SmileCandy.ttf");
+}
+
+@font-face {
+    font-family: "Aptos";
+    src: url("/resources/aptos-light.ttf");
 }
 
 html {
     font-family: Aptos, sans-serif;
+    text-align: center;
 }
 
 body {
+    margin: 0;
+}
+
+main {
     margin: 0;
 
     scroll-snap-type: y mandatory;
@@ -48,10 +58,16 @@ section {
 }
 
 h1 {
-    font-family: Room205, sans-serif;
+    font-family: "SmileCandy", sans-serif;
     font-size: 8rem;
+    font-weight: lighter;
+    color: var(--pblack);
 
     margin: 0;
+
+    -webkit-text-stroke: 2px var(--ppink);
+
+    user-select: none;
 }
 
 button {
@@ -61,8 +77,66 @@ button {
     border: none;
     background-color: var(--pwhite);
 
-    position: absolute;
-    bottom: 10rem;
-
     cursor: pointer;
+
+    position: fixed;
+    bottom: 6rem;
+}
+
+.menu {
+    z-index: 10;
+}
+
+.hb {
+    stroke: var(--pblack)
+}
+
+.menudiv {
+    visibility: hidden;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+
+    border-radius: 50%;
+
+    width: 1px;
+    height: 1px;
+
+    transition: width, height, top, left, bottom, 0.75s ease;
+}
+
+.open {
+    visibility: visible;
+    border-radius: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--plightblue);
+}
+
+.headers {
+    font-size: 3rem;
+    user-select: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--pblack);
+
+    opacity: 0;
+
+    position: absolute;
+    left: 45%;
+
+    transition: opacity 0.5s 0.1s, transform 0.5s;
+}
+
+.headers:hover {
+    transform: scale(1.3);
+}
+
+.top {
+    display: none;
 }
